@@ -35,7 +35,7 @@ function toggleTimes() {
 
   if (x.matches) {
     bars.style.right = "-33px";
-    bars.style.top = "-30px";
+    bars.style.top = "-10px";
   } else {
   }
 }
