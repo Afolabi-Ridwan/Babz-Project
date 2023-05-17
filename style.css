@@ -212,12 +212,6 @@ h3 {
 }
 /* SECOND PAGE */
 
-@media (max-width: 1000px) {
-  .brand-info-text {
-    max-width: 40vw;
-  }
-}
-
 @media (max-width: 1200px) {
   li {
     padding: 2px;
@@ -248,29 +242,22 @@ h3 {
   }
 }
 
-@media (max-width: 414px) {
-  #brand-name {
-    font-size: 25px;
+@media (max-width: 1000px) {
+  .brand-info-text {
+    max-width: 40vw;
   }
+}
 
-  .brand-info {
-    display: flex;
-    flex-direction: column;
+@media (max-width: 856px) {
+  .home-page .container {
+    position: relative;
   }
-
-  #bars {
-    padding: 15px;
-  }
-  #cart {
-    padding: 15px;
-  }
-
-  #navigation {
-    margin-top: 8px;
-  }
-  #second-page .container {
-    margin-top: 0;
-    /* z-index: 10; */
+  #image {
+    right: 20px;
+    width: 350px;
+    height: 500px;
+    position: absolute;
+    top: 25vh;
   }
 }
 
@@ -305,16 +292,14 @@ h3 {
   }
 }
 
-@media (max-width: 856px) {
-  .home-page .container {
-    position: relative;
+@media (max-width: 664px) {
+  li a {
+    margin: 0 -10px;
+    font-size: 13px;
   }
-  #image {
-    right: 20px;
-    width: 350px;
-    height: 500px;
-    position: absolute;
-    top: 25vh;
+
+  li {
+    padding: 5px 7px;
   }
 }
 
@@ -466,13 +451,51 @@ h3 {
   /* second page */
 }
 
-@media (max-width: 664px) {
-  li a {
-    margin: 0 -10px;
-    font-size: 13px;
+@media (max-width: 414px) {
+  #brand-name {
+    font-size: 25px;
   }
 
-  li {
-    padding: 5px 7px;
+  .brand-info {
+    display: flex;
+    flex-direction: column;
   }
+
+  #bars {
+    padding: 15px;
+  }
+  #cart {
+    padding: 15px;
+  }
+
+  #navigation {
+    margin-top: 8px;
+  }
+  #second-page .container {
+    margin-top: 0;
+    /* z-index: 10; */
+  }
+
+  /* second page */
+
+  #second-page .tab1 .box1,
+  #second-page .tab1 .box2,
+  #second-page .tab1 .box3,
+  #second-page .tab2 .box1,
+  #second-page .tab2 .box2,
+  #second-page .tab2 .box3,
+  #second-page .tab3 .box1,
+  #second-page .tab3 .box2,
+  #second-page .tab3 .box3 {
+    width: 60vw;
+    height: 350px;
+    margin: 15px 0;
+  }
+
+  #second-page .tab1 img,
+  #second-page .tab2 img,
+  #second-page .tab3 img {
+    width: 200px;
+  }
+  /* second page */
 }
