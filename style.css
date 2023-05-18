@@ -1,7 +1,10 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  /* font-family: Poppins; */
 }
 
 /* HOME PAGE */
@@ -29,10 +32,18 @@ body {
 }
 
 .navbar {
+  position: fixed;
   width: 100vw;
   padding: 20px 40px;
+  /* padding-bottom: 10px; */
   display: flex;
   justify-content: space-between;
+  background-color: white;
+  z-index: 100;
+}
+
+.navbar.sticky {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 #navbar {
@@ -122,6 +133,7 @@ h3 {
 
 #bars {
   opacity: 0;
+  /* transform: translateY(-10px); */
 }
 
 #times {
@@ -158,18 +170,19 @@ h3 {
   align-items: center;
   justify-content: space-between;
 }
+
 #second-page .tab1 img,
 #second-page .tab2 img,
 #second-page .tab3 img {
-  width: 150px;
-  height: 120px;
+  width: 180px;
+  height: 200px;
 }
 
 #second-page .tab1 img:hover,
 #second-page .tab2 img:hover,
 #second-page .tab3 img:hover {
   width: 200px;
-  height: 130px;
+  height: 230px;
 }
 
 #second-page .tab1 .box1,
@@ -188,7 +201,8 @@ h3 {
   align-items: center;
   justify-content: space-between;
   padding-top: 10px;
-  height: 300px;
+  height: 380px;
+  margin-bottom: 25px;
   background-color: white;
   /* border: solid 5px var(--black); */
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
@@ -198,14 +212,14 @@ h3 {
 #second-page .tab2 p,
 #second-page .tab3 p {
   max-width: 200px;
-  margin-bottom: 10px;
+  margin-top: -20px;
   text-align: center;
 }
 
 #second-page .tab1 button,
 #second-page .tab2 button,
 #second-page .tab3 button {
-  padding: 5px 25px;
+  padding: 5px 30px;
   font-size: 15px;
   font-weight: bold;
   margin: 0;
@@ -304,7 +318,7 @@ h3 {
     justify-content: space-between;
     margin: 0 10px;
     padding-top: 10px;
-    height: 300px;
+    height: 380px;
     background-color: white;
   }
   /* second page */
@@ -422,13 +436,14 @@ h3 {
 
   #times {
     display: none;
-    position: absolute;
+    position: fixed;
     top: 43px;
     right: 33px;
   }
 
   #times.active {
     display: block;
+    z-index: 1000;
   }
 
   .brand-info {
@@ -504,6 +519,12 @@ h3 {
     color: white;
     background-color: var(--black);
   }
+
+  #second-page .tab1 button,
+  #second-page .tab2 button,
+  #second-page .tab3 button {
+    padding: 5px 30px;
+  }
   /* second page */
 }
 
@@ -551,14 +572,28 @@ h3 {
   #second-page .tab3 .box2,
   #second-page .tab3 .box3 {
     width: 60vw;
-    height: 350px;
+    height: 400px;
     margin: 15px 0;
   }
 
   #second-page .tab1 img,
   #second-page .tab2 img,
   #second-page .tab3 img {
+    width: 180px;
+    height: 200px;
+  }
+
+  #second-page .tab1 img:hover,
+  #second-page .tab2 img:hover,
+  #second-page .tab3 img:hover {
     width: 200px;
+    height: 230px;
+  }
+
+  #second-page .tab1 button,
+  #second-page .tab2 button,
+  #second-page .tab3 button {
+    padding: 5px 40px;
   }
   /* second page */
 }
