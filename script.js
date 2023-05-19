@@ -6,6 +6,8 @@ let times = document.getElementById("times");
 let carts = document.getElementById("cart");
 let a = times.classList.contains("active");
 let x = window.matchMedia("(max-width: 414px)");
+let menu = navbar.getAttribute("li");
+// let menuLists = menu.querySelectorAll("a");
 
 window.addEventListener("scroll", function () {
   wholeNavbar.classList.toggle("sticky", this.window.scrollY > 0);
@@ -27,6 +29,9 @@ times.addEventListener("click", function () {
   toggleTimes();
 });
 
+menu.addEventListener("click", function () {
+  alert("abc");
+});
 function toggleTimes() {
   navbar.classList.remove("toggle");
   times.classList.remove("active");

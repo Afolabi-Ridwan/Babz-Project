@@ -171,6 +171,21 @@ h3 {
   justify-content: space-between;
 }
 
+/* #second-page p,
+#second-page h4,
+#second-page header,
+#second-page button {
+  font-family: Poppins;
+} */
+
+#second-page p {
+  font-weight: 500;
+}
+
+#second-page h4 {
+  font-weight: bolder;
+}
+
 #second-page .tab1 img,
 #second-page .tab2 img,
 #second-page .tab3 img {
@@ -225,7 +240,7 @@ h3 {
   margin: 0;
   margin-bottom: 15px;
   border: none;
-  border-radius: 10px;
+  border-radius: 5px;
   color: white;
   background-color: var(--black);
 }
@@ -234,10 +249,11 @@ h3 {
   margin: 20px 0;
 }
 
+#second-page #men-wears,
 #second-page #women-wears,
 #second-page #kids-wears,
 #second-page #jewelry {
-  margin-top: 50px;
+  padding-top: 100px;
   /* margin-bottom: -20px; */
 }
 /* SECOND PAGE */
@@ -493,8 +509,8 @@ h3 {
   #second-page .tab3 .box1,
   #second-page .tab3 .box2,
   #second-page .tab3 .box3 {
-    width: 40vw;
-    height: 350px;
+    width: 80vw;
+    height: 400px;
     margin: 15px 0;
   }
 
@@ -571,7 +587,7 @@ h3 {
   #second-page .tab3 .box1,
   #second-page .tab3 .box2,
   #second-page .tab3 .box3 {
-    width: 60vw;
+    width: 80vw;
     height: 400px;
     margin: 15px 0;
   }
@@ -593,7 +609,7 @@ h3 {
   #second-page .tab1 button,
   #second-page .tab2 button,
   #second-page .tab3 button {
-    padding: 5px 40px;
+    padding: 5px 100px;
   }
   /* second page */
 }
