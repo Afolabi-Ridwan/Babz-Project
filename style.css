@@ -252,7 +252,8 @@ h3 {
 
 #second-page #men-wears,
 #second-page #women-wears,
-#second-page #kids-wears #second-page #jewelry {
+#second-page #kids-wears,
+#second-page #jewelry {
   padding-top: 100px;
   margin-top: -60px;
 }
