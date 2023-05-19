@@ -147,7 +147,7 @@ h3 {
 /* SECOND PAGE */
 
 #second-page .container {
-  margin-top: 50px;
+  /* margin-top: 50px; */
   width: 100vw;
   display: flex;
   flex-direction: column;
@@ -254,7 +254,7 @@ h3 {
 #second-page #kids-wears,
 #second-page #jewelry {
   padding-top: 100px;
-  /* margin-bottom: -20px; */
+  margin-top: -60px;
 }
 /* SECOND PAGE */
 
