@@ -31,6 +31,22 @@ body {
   overflow-x: hidden;
 }
 
+#cart-amount {
+  background-color: white;
+  color: var(--black);
+  font-weight: bold;
+  width: 20px;
+  /* height: 25px; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 100%;
+  position: fixed;
+  z-index: 20000;
+  top: 26px;
+  right: 65px;
+}
+
 .navbar {
   position: fixed;
   width: 100vw;
@@ -142,6 +158,44 @@ h3 {
   font-size: 25px;
 }
 
+#cart-added {
+  position: fixed;
+  top: 150px;
+  right: -30vw;
+  background-color: white;
+  width: 300px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  transition: 1.5s ease-in-out;
+}
+
+#cart-added.active {
+  right: 10px;
+}
+
+#cart-added.remove {
+  right: -30vw;
+}
+#cart-added #item-added {
+  display: flex;
+  padding: 25px 60px;
+}
+
+#check-icon {
+  color: green;
+  margin-right: 15px;
+}
+
+#cart-added #hr {
+  width: 0;
+  height: 5px;
+  background-color: green;
+  padding: 0;
+  transition: 3s ease;
+}
+
+#cart-added #hr.active {
+  width: 300px;
+}
 /* HOME PAGE */
 
 /* SECOND PAGE */
@@ -259,6 +313,48 @@ h3 {
 }
 /* SECOND PAGE */
 
+/* Third Page */
+#third-page {
+  margin: 100px 0;
+  display: flex;
+  justify-content: center;
+  padding: 25vh 0;
+  background: var(--black);
+}
+
+.properties {
+  display: flex;
+  flex-direction: column;
+}
+
+table {
+  width: 70vw;
+}
+
+table,
+th,
+td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+
+#third-page li,
+#third-page p,
+#third-page td {
+  font-weight: bold;
+}
+
+#third-page li {
+  margin: 7px 0;
+}
+
+#third-page .item-table,
+#third-page .cost,
+#third-page .number {
+  padding-left: 15px;
+}
+/* Third Page */
+
 @media (max-width: 1200px) {
   li {
     padding: 2px;
@@ -305,6 +401,11 @@ h3 {
     height: 500px;
     position: absolute;
     top: 25vh;
+  }
+
+  #cart-amount {
+    top: 26px;
+    right: 15px;
   }
 
   /* second page */
@@ -488,6 +589,10 @@ h3 {
     color: var(--black);
     font-weight: bold;
   }
+  #cart-amount {
+    top: 26px;
+    right: 55px;
+  }
 
   /* second page */
 
@@ -584,12 +689,17 @@ h3 {
     margin-top: 8px;
   }
 
+  #cart-amount {
+    top: 26px;
+    right: 80px;
+  }
+
+  /* second page */
+
   #second-page .container {
     margin-top: 0;
     /* z-index: 10; */
   }
-
-  /* second page */
 
   #second-page .tab1 .box1,
   #second-page .tab1 .box2,

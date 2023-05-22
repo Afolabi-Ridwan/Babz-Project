@@ -4,10 +4,28 @@ let navbar = document.getElementById("navbar");
 let wholeNavbar = document.querySelector(".navbar");
 let times = document.getElementById("times");
 let carts = document.getElementById("cart");
+let cartItems = document.querySelectorAll(".cart-items");
+let cartAmount = document.querySelector("#cart-amount");
+let cartAdded = document.querySelector("#cart-added");
+let hr = document.getElementById("hr");
 let a = times.classList.contains("active");
 let x = window.matchMedia("(max-width: 414px)");
-let menu = navbar.getAttribute("li");
-// let menuLists = menu.querySelectorAll("a");
+let b = 1;
+
+for (let i = 0; i < 36; i++) {
+  cartItems[i].addEventListener("click", function () {
+    if (b < 37) {
+      const k = b++;
+      cartAmount.textContent = k;
+
+      cartAdded.classList.add("active");
+      hr.classList.add("active");
+    } else {
+    }
+  });
+  // cartAdded.classList.remove("active");
+}
+// cartAdded.classList.add("remove");
 
 window.addEventListener("scroll", function () {
   wholeNavbar.classList.toggle("sticky", this.window.scrollY > 0);
@@ -23,15 +41,14 @@ bars.addEventListener("click", function () {
   if (a === false) {
     carts.style.marginRight = "15px";
   }
+
+  cartAmount.style.right = "60px";
 });
 
 times.addEventListener("click", function () {
   toggleTimes();
 });
 
-menu.addEventListener("click", function () {
-  alert("abc");
-});
 function toggleTimes() {
   navbar.classList.remove("toggle");
   times.classList.remove("active");
