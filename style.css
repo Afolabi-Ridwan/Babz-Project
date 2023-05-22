@@ -474,6 +474,10 @@ td {
   li a {
     margin: 0 -5px;
   }
+
+  #cart-added {
+    right: -100vw;
+  }
 }
 
 @media (max-width: 664px) {
@@ -692,6 +696,14 @@ td {
   #cart-amount {
     top: 26px;
     right: 80px;
+  }
+
+  #cart-added {
+    right: -100vw;
+  }
+
+  #cart-added.active {
+    right: 10px;
   }
 
   /* second page */
