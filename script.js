@@ -7,6 +7,7 @@ let carts = document.getElementById("cart");
 let cartItems = document.querySelectorAll(".cart-items");
 let cartAmount = document.querySelector("#cart-amount");
 let cartAdded = document.querySelector("#cart-added");
+let radio = document.getElementById("radio");
 let hr = document.getElementById("hr");
 let a = times.classList.contains("active");
 let x = window.matchMedia("(max-width: 414px)");
@@ -18,14 +19,16 @@ for (let i = 0; i < 36; i++) {
       const k = b++;
       cartAmount.textContent = k;
 
-      cartAdded.classList.add("active");
-      hr.classList.add("active");
+      // cartAdded.classList.add("active");
+      // hr.classList.add("active");
+      // cartAdded.classList.remove("active");
+
+      // cartAdded.classList.add("remove");
     } else {
     }
   });
   // cartAdded.classList.remove("active");
 }
-// cartAdded.classList.add("remove");
 
 window.addEventListener("scroll", function () {
   wholeNavbar.classList.toggle("sticky", this.window.scrollY > 0);
