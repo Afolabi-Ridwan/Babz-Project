@@ -316,10 +316,10 @@ h3 {
 
 /* Third Page */
 #third-page {
-  margin: 100px 0;
+  /* margin: 100px 0; */
   display: flex;
   justify-content: center;
-  padding: 25vh 0;
+  padding: 15vh 0;
   background: var(--black);
 }
 
@@ -329,7 +329,7 @@ h3 {
 }
 
 #third-page .property-info {
-  width: 670px;
+  width: 740px;
   display: flex;
   justify-content: space-between;
 }
@@ -363,10 +363,19 @@ td {
   margin: 7px 0;
 }
 
+#third-page input[type="checkbox"] {
+  margin-right: 5px;
+}
+
+#third-page input[type="number"] {
+  width: 50px;
+  margin-left: 25px;
+}
+
 #third-page .item-table,
 #third-page .cost,
 #third-page .number {
-  padding-left: 15px;
+  padding-left: 10px;
 }
 
 /* #uncheck {
@@ -789,12 +798,13 @@ td {
     padding-top: 150px;
     margin-top: -130px;
   }
+
   /* second page */
 
   /* third page */
 
   #third-page {
-    margin: 50px 0;
+    /* margin: 50px 0; */
     display: flex;
     justify-content: center;
     padding: 10vh 0;
