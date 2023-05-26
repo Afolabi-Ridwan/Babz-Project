@@ -1,7 +1,16 @@
 const menCheckBox = document.getElementsByClassName("menCheckbox");
+const womenCheckBox = document.getElementsByClassName("womenCheckbox");
+const kidsCheckBox = document.getElementsByClassName("kidsCheckbox");
+const jewelryCheckBox = document.getElementsByClassName("jewelryCheckbox");
 // const checkBox = document.querySelectorAll("input");
-const numberOfItemsForMen = document.querySelector(".menItemNumber");
+let numberOfItemsForMen = document.getElementById("menItemNumber");
+let numberOfItemsForWomen = document.getElementById("womenItemNumber");
+let numberOfItemsForKids = document.getElementById("kidsItemNumber");
+let numberOfItemsForJewelry = document.getElementById("jewelryItemNumber");
 let a = 1;
+let b = 1;
+let c = 1;
+let d = 1;
 
 // second page
 for (let i = 0; i < 36; i++) {
@@ -9,20 +18,48 @@ for (let i = 0; i < 36; i++) {
     if (menCheckBox[i].checked) {
       // alert("added to carts");
       console.log(menCheckBox[i].checked);
-      numberOfItemsForMen.value = a++;
-      // console.log(a);
+      numberOfItemsForMen.textContent = a++;
     } else {
-      // alert("removed from carts");
-      // console.log(a--);
       console.log(menCheckBox[i].checked);
 
-      numberOfItemsForMen.value = a--;
+      numberOfItemsForMen.textContent = a--;
     }
   });
-  // const checkBoxCondition = checkBox[i].attributes("");
-  // if (checkBoxCondition === true) {
-  //   console.log("checked");
-  // } else {
-  // }
+
+  womenCheckBox[i].addEventListener("click", function () {
+    if (womenCheckBox[i].checked) {
+      // alert("added to carts");
+      console.log(womenCheckBox[i].checked);
+      numberOfItemsForWomen.textContent = b++;
+    } else {
+      console.log(womenCheckBox[i].checked);
+
+      numberOfItemsForWomen.textContent = b--;
+    }
+  });
+
+  kidsCheckBox[i].addEventListener("click", function () {
+    if (kidsCheckBox[i].checked) {
+      // alert("added to carts");
+      console.log(kidsCheckBox[i].checked);
+      numberOfItemsForKids.textContent = c++;
+    } else {
+      console.log(kidsCheckBox[i].checked);
+
+      numberOfItemsForKids.textContent = c--;
+    }
+  });
+
+  jewelryCheckBox[i].addEventListener("click", function () {
+    if (jewelryCheckBox[i].checked) {
+      // alert("added to carts");
+      console.log(jewelryCheckBox[i].checked);
+      numberOfItemsForJewelry.textContent = d++;
+    } else {
+      console.log(jewelryCheckBox[i].checked);
+
+      numberOfItemsForJewelry.textContent = d--;
+    }
+  });
 }
 // second page

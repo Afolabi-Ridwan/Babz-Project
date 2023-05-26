@@ -12,22 +12,33 @@ let hr = document.getElementById("hr");
 let a = times.classList.contains("active");
 let x = window.matchMedia("(max-width: 414px)");
 let b = 1;
+let timer;
 
 for (let i = 0; i < 36; i++) {
   cartItems[i].addEventListener("click", function () {
     if (b < 37) {
       const k = b++;
       cartAmount.textContent = k;
-
-      // cartAdded.classList.add("active");
-      // hr.classList.add("active");
-      // cartAdded.classList.remove("active");
-
-      // cartAdded.classList.add("remove");
+      showNotificationBar();
     } else {
     }
   });
   // cartAdded.classList.remove("active");
+}
+
+function showNotificationBar() {
+  // clearTimeout(timer);
+  clearTimeout(timer);
+
+  cartAdded.classList.add("active");
+  hr.classList.add("active");
+
+  timer = setTimeout(hideNotificationBar, 2500);
+}
+
+function hideNotificationBar() {
+  cartAdded.classList.remove("active");
+  hr.classList.remove("active");
 }
 
 window.addEventListener("scroll", function () {
