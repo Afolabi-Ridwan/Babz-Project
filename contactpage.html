@@ -14,7 +14,7 @@
     </header>
 
     <main>
-      <form id="contact-form">
+      <form onsubmit="sendEmail(); reset(); return false;" id="myForm">
         <div class="form-group">
           <label for="name">Name:</label>
           <input type="text" id="name" name="name" required />
@@ -31,8 +31,8 @@
       </form>
     </main>
 
-    <footer>
-      <p>&copy; 2023 Your Website. All rights reserved.</p>
-    </footer>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+
+    <script src="contactpage.js"></script>
   </body>
 </html>

@@ -104,7 +104,7 @@ h3 {
 }
 
 .brand-info {
-  margin-top: 200px;
+  margin-top: 150px;
   position: absolute;
   padding: 0 40px;
 }
@@ -118,7 +118,7 @@ h3 {
 }
 
 .brand-info-text h1 {
-  font-size: 70px;
+  font-size: 60px;
   color: var(--brown);
   text-shadow: 1px 1px 2px #000000;
 }
@@ -127,8 +127,8 @@ h3 {
   position: absolute;
   right: 50px;
   bottom: 0px;
-  width: 420px;
-  height: 550px;
+  width: 350px;
+  height: 450px;
 }
 
 #cart,
@@ -165,12 +165,12 @@ h3 {
   background-color: white;
   width: 300px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  transition: 1.5s ease-in;
+  transition: 1s ease-in;
 }
 
 #cart-added.active {
   right: 10px;
-  transition: 0.5s;
+  transition: 0.2s;
 }
 
 #cart-added.active.remove {
@@ -191,7 +191,7 @@ h3 {
   height: 5px;
   background-color: green;
   padding: 0;
-  transition: 3s ease;
+  transition: 0.3s ease;
 }
 
 #cart-added #hr.active {
@@ -313,93 +313,6 @@ h3 {
   margin-top: -60px;
 }
 /* SECOND PAGE */
-
-/* Third Page */
-#third-page {
-  /* margin: 100px 0; */
-  display: flex;
-  justify-content: center;
-  padding: 15vh 0;
-  background: var(--brown);
-}
-
-#third-page .properties {
-  display: flex;
-  flex-direction: column;
-}
-
-#third-page .property-info {
-  width: 740px;
-  display: flex;
-  justify-content: space-between;
-}
-
-#third-page .price {
-  position: relative;
-  right: 0;
-}
-
-table {
-  width: 80vw;
-}
-
-table,
-th,
-td {
-  border: 1px solid brown;
-  border-collapse: collapse;
-}
-
-#third-page li,
-#third-page p,
-#third-page td {
-  font-weight: bold;
-}
-
-#third-page li {
-  display: flex;
-  align-items: center;
-  /* justify-content: center; */
-  margin: 7px 0;
-}
-
-#third-page input[type="checkbox"] {
-  margin-right: 5px;
-}
-
-#third-page .numbers {
-  width: 50px;
-  margin-left: 50px;
-}
-
-#third-page .cost {
-  width: 50px;
-
-  margin-left: 10px;
-}
-
-#third-page .item-table,
-#third-page .cost,
-#third-page .number {
-  padding-left: 10px;
-}
-
-/* #uncheck {
-  width: 12px;
-  height: 12px;
-  margin-right: 5px;
-  font-size: 12px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 100%;
-  background-color: white;
-  color: red; */
-/* display: noe; */
-/* opacity: 0; */
-/* } */
-
-/* Third Page */
 
 @media (max-width: 1200px) {
   li {
@@ -523,6 +436,10 @@ td {
 
   #cart-added {
     right: -100vw;
+  }
+
+  #second-page {
+    margin-top: 70px;
   }
 }
 
@@ -725,6 +642,7 @@ td {
   .brand-info {
     display: flex;
     flex-direction: column;
+    margin-top: 200px;
   }
 
   #bars {
@@ -755,7 +673,7 @@ td {
   /* second page */
 
   #second-page .container {
-    margin-top: 0;
+    margin-top: -90px;
     /* z-index: 10; */
   }
 
@@ -806,78 +724,6 @@ td {
   }
 
   /* second page */
-
-  /* third page */
-
-  #third-page {
-    /* margin: 50px 0; */
-    display: flex;
-    justify-content: center;
-    padding: 10vh 0;
-    background: var(--brown);
-  }
-
-  #third-page .properties {
-    display: flex;
-    flex-direction: column;
-  }
-
-  #third-page .property-info {
-    width: 170px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
-
-  #third-page .numbers,
-  #third-page .cost {
-    width: 50px;
-
-    margin-left: 30px;
-  }
-  #third-page .price {
-    position: relative;
-    right: 0;
-  }
-
-  table {
-    width: 100vw;
-  }
-
-  table,
-  th,
-  td {
-    border: 1px solid black;
-    border-collapse: collapse;
-  }
-
-  #third-page li,
-  #third-page p,
-  #third-page td {
-    font-weight: bold;
-    font-size: 13px;
-  }
-
-  #third-page li {
-    display: flex;
-    align-items: center;
-    /* justify-content: center; */
-    margin: 7px 0;
-  }
-
-  #third-page .item-table,
-  #third-page .cost,
-  #third-page .number {
-    padding-left: 15px;
-    width: 100px;
-  }
-
-  #third-page .item-table {
-    width: 290px;
-    font-size: 10px;
-  }
-
-  /* third page */
 }
 
 @media (max-width: 376px) {

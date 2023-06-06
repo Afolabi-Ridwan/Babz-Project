@@ -7,7 +7,7 @@
     />
     <title>BabzFashion</title>
     
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="secondpage.css">
 </head>
 <body>
     <section id="third-page">
@@ -19,206 +19,306 @@
             <th> Number of Items </th>
             <th> Costs($) </th>                    
           </tr>
+          <div id="men">
           <tr>
             <td class="item-table"> Men </td>
             <td> <ul class="properties"> 
-              <div class="property-info">
-                <li> </i><input class="menCheckbox" type="checkbox"> Fitty Lell Men's Slim Fit 2 Piece Suit </li>
-                <p class="price"> $200</p>
-              </div>
-              <div class="property-info">
-                <li> </i><input class="menCheckbox" type="checkbox"> BURBERRY Reepham Shi </li>
-                <p class="price"> $150 </p>
-              </div>
-              <div class="property-info">
-                <li> </i><input class="menCheckbox" type="checkbox"> Men's Smart Corporate Suit - Navy Blue  </li>
-                <p class="price"> $150 </p>
-              </div>
-              <div class="property-info">
-                <li> </i><input class="menCheckbox" type="checkbox"> Das Solid Men Round Neck Black T-Shirt  </li>
-                <p class="price"> $220</p>
-              </div>
-              <div class="property-info">
-                <li> </i><input class="menCheckbox" type="checkbox"> FLYDAY Hi Relax Shirt  </li>
-                <p class="price"> $90</p>
-              </div>
-              <div class="property-info">
-                <li> </i><input class="menCheckbox" type="checkbox"> FLYDAY Acorn Oversized Collar Tee Shirt </li>
-                <p class="price"> $100</p>
-              </div>
-              <div class="property-info">
-                <li> </i><input class="menCheckbox" type="checkbox"> Amiri Core Logo Hoodie  </li>
-                <p class="price"> $690 </p>
-              </div>
-              <div class="property-info">
-                <li> </i><input class="menCheckbox" type="checkbox"> SAINT LAURENT Hoodie </li>
-                <p class="price"> $750</p>
-              </div>
-              <div class="property-info">
-                <li> </i><input class="menCheckbox" type="checkbox"> VERSACE Taylor Fit Polo </li>
-                <p class="price"> $100</p>
-              </div>
-            </ul>  
-          </td>
-          <td >
-            <p class="numbers" id="menItemNumber"></p>
-          </td>
-  
-          <td>
-            <p class="cost"> asss</p>
-          </td>
-          </tr>
-  
-          <tr>
-            <td class="item-table"> Women </td>
-            <td> <ul class="properties"> 
               
               <div class="property-info">
-                <li> </i><input class="womenCheckbox" type="checkbox"> Emma Silk Dress </li>
-                <p class="price"> $395 </p>
+    
+                <div class="menCheckbox">
+                  <div>
+                <input class="men" id="A" name="Gender" type="radio" value="200"  required>
+                <label for="A"> Fitty Lell Men's Slim... </label>
+                </div>
+              
+                <p class="price"> $200</p>
+                </div>
+                
+                <div class="menCheckbox">
+                <div>
+                <input class="men" id="B" name="Gender" type="radio" value="150" required>
+                <label for="B"> BURBERRY Reepham Shi </label>
+                </div>
+                <p class="price"> $150 </p>
+            
+                </div>
+
+                <div class="menCheckbox">
+                <div>
+                <input class="men" id="C" name="Gender" type="radio" value="150" required>
+                <label for="C"> Men's Corporate Suit </label>
+                </div>
+                <p class="price"> $150 </p>  
+                </div>
+
+                <div class="menCheckbox">
+                <div>
+                <input class="men" id="D" name="Gender" value="220" type="radio" required>
+                <label for="D"> Das Solid Men RN... </label>
+                </div>
+                <p class="price"> $220</p>
+              
+                </div>
+
+                <div class="menCheckbox" >
+                <div class="none">
+                <input class="men" value="0" id="E" name="Gender" type="radio" required>
+                <label for="E" > None </label>
+                </div>
+                </div>
               </div>
-              <div class="property-info">
-                <li> </i><input class="womenCheckbox" type="checkbox"> ALAIA Edition Zip Asymmetric Body Sculpting Dress </li>
-                <p class="price"> $1050 </p>
-              </div>
-              <div class="property-info">
-                <li> </i><input class="womenCheckbox" type="checkbox"> ALEXIS Lune Dress </li>
-                <p class="price"> $328</p>
-              </div>
-              <div class="property-info">
-                <li> </i><input class="womenCheckbox" type="checkbox"> L'AGENCE Karly Ruched Dress </li>
-                <p class="price"> $430</p>
-              </div>
-              <div class="property-info">
-                <li> </i><input class="womenCheckbox" type="checkbox"> NORMA KAMALI Sleeveless All In One Top </li>
-                <p class="price"> $98</p>
-              </div>
-              <div class="property-info">
-                <li> </i><input class="womenCheckbox" type="checkbox"> GAUGE81 Reno Jumpsuit </li>
-                <p class="price"> $146</p>
-              </div>
-              <div class="property-info">
-                <li> </i><input class="womenCheckbox" type="checkbox"> MIU MIU Sleeveless Dress </li>
-                <p class="price"> $950</p>
-              </div>
-              <div class="property-info">
-                <li> </i><input class="womenCheckbox" type="checkbox"> ULLA JOHNSON Valentina Dress </li>
-                <p class="price"> $490</p>
-              </div>
-              <div class="property-info">
-                <li> </i><input class="womenCheckbox" type="checkbox"> RETROFETE Raquel Strapless Denim Dress </li>
-                <p class="price"> $100</p>
-              </div>
+              
             </ul>  
           </td>
           <td class="number">
-            <p class="numbers" id="womenItemNumber"></p>
+            <p class="numbers" >
+              <div class="dropdown-content">
+
+              <select name="Unit" id="menUnit" onchange="myFunction()">
+                <option value="">Unit</option>
+                <option value="">1</option>
+                <option value="">2</option>
+                <option value="">3</option>
+                <option value="">4</option>
+              </select>
+            </p>
           </td>
   
           <td>
-            <p class="cost"> asss</p>
+            <p class="menCost"> </p>
+          </td>
+          </tr>
+  </div>
+          <tr>
+            <td class="item-table"> Women </td>
+            
+              <td> <ul class="properties"> 
+
+                <div class="property-info">
+      
+                  <div class="womenCheckbox">
+                    <div>
+                  <input class="women" id="A" name="Gender" type="radio" value="395" required>
+                  <label for="A"> Emma Silk Dress </label>
+                  </div>
+                
+                  <p class="price"> $395</p>
+                  </div>
+                  
+                  <div class="womenCheckbox">
+                  <div>
+                  <input class="women" id="B" name="Gender" value="1050" type="radio" required>
+                  <label for="B"> ALAIA Edition Zip... </label>
+                  </div>
+                  <p class="price"> $1050 </p>
+              
+                  </div>
+  
+                  <div class="womenCheckbox">
+                  <div>
+                  <input class="women" value="328"  id="C" name="Gender" type="radio" required>
+                  <label for="C"> ALEXIS Lune Dress </label>
+                  </div>
+                  <p class="price"> $328 </p>  
+                  </div>
+  
+                  <div class="womenCheckbox">
+                  <div>
+                  <input class="women" value="430" id="D" name="Gender" type="radio" required>
+                  <label for="D"> AGENCE Karly Ruched Dress </label>
+                  </div>
+                  <p class="price"> $430</p>
+                
+                  </div>
+  
+                  <div class="womenCheckbox" >
+
+                  <div class="none">
+
+                  <input class="women" value="0" id="E" name="Gender" type="radio" required>
+                  <label for="E" > None </label>
+
+                  </div>
+
+                  </div>
+                </div>
+                
+              </ul>  
+            </td>
+            </ul>  
+          </td>
+          <td class="number">
+            <p class="numbers" >
+              <div class="dropdown-content">
+
+                <select name="Unit" id="womenUnit" onchange="myFunction()">
+                  <option value="">Unit</option>
+                  <option value="">1</option>
+                  <option value="">2</option>
+                  <option value="">3</option>
+                  <option value="">4</option>
+                </select>
+                </div>
+            </p>
+          </td>
+  
+          <td>
+            <p class="womenCost"> </p>
           </td>
           </tr>
   
           <tr>
             <td class="item-table"> Kids </td>
             <td> <ul class="properties"> 
-              <div class="property-info">
-                <li> </i><input class="kidsCheckbox" type="checkbox"> Children Elegant Dress Navy </li>
-                <p class="price"> $41.99</p>
+
+            <div class="property-info">
+  
+              <div class="kidsCheckbox">
+                <div>
+              <input class="kids" value="41.99"  id="A" name="Gender" type="radio" required>
+              <label for="A"> Children Elegant Dress </label>
               </div>
-              <div class="property-info">
-                <li> </i><input class="kidsCheckbox" type="checkbox"> NNJXD Flower Girl Dress Kids Ruffles Lace Party Wedding Dresses </li>
-                <p class="price"> $48.20</p>
+            
+              <p class="price"> $41.99</p>
               </div>
-              <div class="property-info">
-                <li> </i><input class="kidsCheckbox" type="checkbox"> RBarBary Yellow </li>
-                <p class="price"> $54.60</p>
+              
+              <div class="kidsCheckbox">
+              <div>
+              <input class="kids" value="48.20" id="B" name="Gender" type="radio" required>
+              <label for="B"> NNJXD Flower Girl Dress... </label>
               </div>
-              <div class="property-info">
-                <li> </i><input class="kidsCheckbox" type="checkbox"> RBarBary Yellow Stray Kids SKZ SKZOO University Hoodie </li>
-                <p class="price"> $100</p>
+              <p class="price"> $48.20 </p>
+          
               </div>
-              <div class="property-info">
-                <li> </i><input class="kidsCheckbox" type="checkbox"> plaid shirt short-sleeved embroidered boys </li>
-                <p class="price"> $250</p>
+
+              <div class="kidsCheckbox">
+              <div>
+              <input class="kids" value="54.60" id="C" name="Gender" type="radio" required>
+              <label for="C">  RBarBary Yellow </label>
               </div>
-              <div class="property-info">
-                <li> </i><input class="kidsCheckbox" type="checkbox"> Kids T-shirt(Girls) </li>
-                <p class="price"> $140</p>
+              <p class="price"> $54.60 </p>  
               </div>
-              <div class="property-info">
-                <li> </i><input class="kidsCheckbox" type="checkbox"> RBarBary Red </li>
-                <p class="price"> $280</p>
+
+              <div class="kidsCheckbox">
+              <div>
+              <input class="kids" value="100" id="D" name="Gender" type="radio" required>
+              <label for="D">  RBarBary Yellow Stray... </label>
               </div>
-              <div class="property-info">
-                <li> </i><input class="kidsCheckbox" type="checkbox"> Name It White Roblox Logo T-Shirt </li>
-                <p class="price"> $150</p>
+              <p class="price"> $100</p>
+            
               </div>
-              <div class="property-info">
-                <li> </i><input class="kidsCheckbox" type="checkbox"> Long-Sleeve Crew-Neck Sweatshirt for Boys </li>
-                <p class="price"> $16.00</p>
+
+              <div class="kidsCheckbox" >
+
+              <div class="none">
+
+              <input class="kids" value="0" id="E" name="Gender" type="radio" required>
+              <label for="E" > None </label>
+
               </div>
-            </ul>  
-          </td>
+
+              </div>
+            </div>
+            
+          </ul>  
+        </td>
           <td class="number">
-            <p class="numbers" id="kidsItemNumber"></p>
+            <p class="numbers" >
+              <div class="dropdown-content">
+
+                <select name="Unit" id="kidsUnit" onchange="myFunction()">
+                  <option value="">Unit</option>
+                  <option value="">1</option>
+                  <option value="">2</option>
+                  <option value="">3</option>
+                  <option value="">4</option>
+                </select>
+                </div>
+            </p>
 
           </td>
   
           <td>
-            <p class="cost"> asss</p>
+            <p class="kidsCost"> </p>
           </td>
           </tr>
   
           <tr>
             <td class="item-table"> Jewelry </td>
-            <td> <ul class="properties"> 
-              <div class="property-info">
-                <li> </i><input class="jewelryCheckbox" type="checkbox"> SOLIS 18KT GOLD WEDDING BAND 5MM </li>
-                <p class="price"> $241.00</p>
+            
+
+          <td> <ul class="properties"> 
+
+            <div class="property-info">
+  
+              <div class="jewelryCheckbox">
+                <div>
+              <input class="jewelry" value="241.00" id="A" name="Gender" type="radio" required>
+              <label for="A"> SOLIS 18KT GOLD...  </label>
               </div>
-              <div class="property-info">
-                <li> </i><input class="jewelryCheckbox" type="checkbox"> REGINA 9KT GOLD BRIDAL SET </li>
-                <p class="price"> $48.20</p>
+            
+              <p class="price"> $241.00</p>
               </div>
-              <div class="property-info">
-                <li> </i><input class="jewelryCheckbox" type="checkbox"> Rolex Daytona </li>
-                <p class="price"> $71,944</p>
+              
+              <div class="jewelryCheckbox">
+              <div>
+              <input class="jewelry" value="48.20" id="B" name="Gender" type="radio" required>
+              <label for="B"> REGINA 9KT GOLD... </label>
               </div>
-              <div class="property-info">
-                <li> </i><input class="jewelryCheckbox" type="checkbox"> Men Watch And Bracelet Set - 3 In 1 - Black And Gold </li>
-                <p class="price"> $120</p>
+              <p class="price"> $48.20 </p>
+          
               </div>
-              <div class="property-info">
-                <li> </i><input class="jewelryCheckbox" type="checkbox"> Fossil Nate Chronograph Stainless Steel Watch – JR1353 </li>
-                <p class="price"> $580</p>
+
+              <div class="jewelryCheckbox">
+              <div>
+              <input class="jewelry" value="719" id="C" name="Gender" type="radio" required>
+              <label for="C">  Rolex Daytona </label>
               </div>
-              <div class="property-info">
-                <li> </i><input class="jewelryCheckbox" type="checkbox"> JENNIFER BEHR Coeur Necklace </li>
-                <p class="price"> $325</p>
+              <p class="price"> $719 </p>  
               </div>
-              <div class="property-info">
-                <li> </i> <input class="jewelryCheckbox" type= "checkbox"> Casio MTP - V006SG </li>
-                <p class="price"> $800</p>
+
+              <div class="jewelryCheckbox">
+              <div>
+              <input class="jewelry" value="120" id="D" name="Gender" type="radio" required>
+              <label for="D"> Men Watch And Bracelet... </label>
               </div>
-              <div class="property-info">
-                <li> </i> <input class="jewelryCheckbox" type ="checkbox"> LAIDA LEATHER BRACELET FOR MEN </li>
-                <p class="price"> $250</p>
+              <p class="price"> $120</p>
+            
               </div>
-              <div class="property-info">
-                <li> </i> <input  class="jewelryCheckbox" type="checkbox"> Bracelet silver 925 yellow gold plated with enamel </li>
-                <p class="price"> $606.00</p>
+
+              <div class="jewelryCheckbox" >
+
+              <div class="none">
+
+              <input class="jewelry" value="0" id="E" name="Gender" type="radio" required>
+              <label for="E" > None </label>
+
               </div>
-            </ul>  
-          </td>
+
+              </div>
+            </div>
+            
+          </ul>  
+        </td>
 
           <td class="number">
-            <p class="numbers" id="jewelryItemNumber"></p>
+            <p class="numbers" >
+                <div class="dropdown-content">
+  
+                  <select name="Unit" id="jewelryUnit" onchange="myFunction()">
+                    <option value="">Unit</option>
+                    <option value="">1</option>
+                    <option value="">2</option>
+                    <option value="">3</option>
+                    <option value="">4</option>
+                  </select>
+                  </div>
+            </p>
           </td>
   
           <td>
-            <p class="cost"> asss</p>
+            <p class="jewelryCost"> </p>
           </td>
           </tr>
   
@@ -231,10 +331,10 @@
             </td>
   
             <td>
-              <p>calculate</p>
+              <button class="calcBtn">calculate</button>
             </td>
   
-            <td>($) 0</td>
+            <td id="totalAmount"></td>
           </tr>
         </table>
       </section>

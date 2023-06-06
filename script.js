@@ -9,23 +9,31 @@ let cartAmount = document.querySelector("#cart-amount");
 let cartAdded = document.querySelector("#cart-added");
 let radio = document.getElementById("radio");
 let hr = document.getElementById("hr");
+let cipContainer = document.getElementById("cipcontainer");
+let brandtext = document.querySelector(".brand-info-text");
 let a = times.classList.contains("active");
 let x = window.matchMedia("(max-width: 414px)");
 let b = 1;
 let timer;
 
 for (let i = 0; i < 36; i++) {
-  cartItems[i].addEventListener("click", function () {
+  cartItems[i].addEventListener("click", function (e) {
+    e.preventDefault();
     if (b < 37) {
       const k = b++;
+
       cartAmount.textContent = k;
       showNotificationBar();
+      // cartItems = cartItems[i].parentElement.classList.add("selected");
+      // console.log(cartItems[i].parentElement);
     } else {
     }
   });
-  // cartAdded.classList.remove("active");
 }
 
+carts.addEventListener("click", function () {
+  window.location.href = "cartItemPage.html";
+});
 function showNotificationBar() {
   // clearTimeout(timer);
   clearTimeout(timer);
@@ -33,7 +41,7 @@ function showNotificationBar() {
   cartAdded.classList.add("active");
   hr.classList.add("active");
 
-  timer = setTimeout(hideNotificationBar, 2500);
+  timer = setTimeout(hideNotificationBar, 500);
 }
 
 function hideNotificationBar() {
@@ -48,7 +56,9 @@ window.addEventListener("scroll", function () {
 });
 
 bars.addEventListener("click", function () {
+  // wholeNavbar.style.zIndex = "1000";
   navbar.classList.add("toggle");
+  navbar.style.zIndex = "10000000";
   bars.style.display = "none";
   times.classList.add("active");
 

@@ -1,4 +1,4 @@
-const menCheckBox = document.getElementsByClassName("menCheckbox");
+const menCheckBox = document.querySelectorAll(".menCheckbox");
 const womenCheckBox = document.getElementsByClassName("womenCheckbox");
 const kidsCheckBox = document.getElementsByClassName("kidsCheckbox");
 const jewelryCheckBox = document.getElementsByClassName("jewelryCheckbox");
@@ -7,59 +7,100 @@ let numberOfItemsForMen = document.getElementById("menItemNumber");
 let numberOfItemsForWomen = document.getElementById("womenItemNumber");
 let numberOfItemsForKids = document.getElementById("kidsItemNumber");
 let numberOfItemsForJewelry = document.getElementById("jewelryItemNumber");
-let a = 1;
-let b = 1;
-let c = 1;
-let d = 1;
+let numberOfItems = document.querySelectorAll(".input");
+let dropdown = document.querySelectorAll(".dropdown-content");
 
-// second page
-for (let i = 0; i < 36; i++) {
-  menCheckBox[i].addEventListener("click", function () {
-    if (menCheckBox[i].checked) {
-      // alert("added to carts");
-      console.log(menCheckBox[i].checked);
-      numberOfItemsForMen.textContent = a++;
-    } else {
-      console.log(menCheckBox[i].checked);
+const menUnit = document.getElementById("menUnit");
+const womenUnit = document.getElementById("womenUnit");
+const kidsUnit = document.getElementById("kidsUnit");
+const jewelryUnit = document.getElementById("jewelryUnit");
+const totalAmount = document.getElementById("totalAmount");
 
-      numberOfItemsForMen.textContent = a--;
+const calcBtn = document.querySelector(".calcBtn");
+const men = document.querySelectorAll(".men");
+const women = document.querySelectorAll(".women");
+const kids = document.querySelectorAll(".kids");
+
+const jewelry = document.querySelectorAll(".jewelry");
+let menItems = document.querySelector("#men");
+const menItemsPrice = document.querySelector(".menCost");
+const womenItemsPrice = document.querySelector(".womenCost");
+const kidsItemsPrice = document.querySelector(".kidsCost");
+const jewelryItemsPrice = document.querySelector(".jewelryCost");
+// const ass = document.getElementById("Ass");
+console.log(menItemsPrice.textContent);
+
+function myFunction() {
+  console.log(menUnit.selectedIndex);
+
+  const a = menUnit.selectedIndex;
+  for (let i = 0; i < 5; i++) {
+    if (men[i].checked) {
+      const w = Number(men[i].value);
+      console.log(w);
+      let menTotal = a * w;
+
+      menItemsPrice.textContent = `$${menTotal}`;
     }
-  });
+  }
 
-  womenCheckBox[i].addEventListener("click", function () {
-    if (womenCheckBox[i].checked) {
-      // alert("added to carts");
-      console.log(womenCheckBox[i].checked);
-      numberOfItemsForWomen.textContent = b++;
-    } else {
-      console.log(womenCheckBox[i].checked);
+  for (let i = 0; i < 5; i++) {
+    if (women[i].checked) {
+      const b = womenUnit.selectedIndex;
 
-      numberOfItemsForWomen.textContent = b--;
+      const x = Number(women[i].value);
+      let womenTotal = b * x;
+      womenItemsPrice.textContent = `$${womenTotal}`;
     }
-  });
-
-  kidsCheckBox[i].addEventListener("click", function () {
-    if (kidsCheckBox[i].checked) {
-      // alert("added to carts");
-      console.log(kidsCheckBox[i].checked);
-      numberOfItemsForKids.textContent = c++;
-    } else {
-      console.log(kidsCheckBox[i].checked);
-
-      numberOfItemsForKids.textContent = c--;
+  }
+  for (let i = 0; i < 5; i++) {
+    if (kids[i].checked) {
+      const c = kidsUnit.selectedIndex;
+      const y = Number(kids[i].value);
+      let kidsTotal = c * y;
+      kidsItemsPrice.textContent = `$${kidsTotal}`;
     }
-  });
+  }
 
-  jewelryCheckBox[i].addEventListener("click", function () {
-    if (jewelryCheckBox[i].checked) {
-      // alert("added to carts");
-      console.log(jewelryCheckBox[i].checked);
-      numberOfItemsForJewelry.textContent = d++;
-    } else {
-      console.log(jewelryCheckBox[i].checked);
+  for (let i = 0; i < 5; i++) {
+    const d = jewelryUnit.selectedIndex;
+    if (jewelry[i].checked) {
+      const z = Number(jewelry[i].value);
+      let jewelryTotal = d * z;
 
-      numberOfItemsForJewelry.textContent = d--;
+      jewelryItemsPrice.textContent = `$${jewelryTotal}`;
     }
+  }
+
+  let menP = menItemsPrice.textContent;
+  let womenP = womenItemsPrice.textContent;
+  let kidsP = kidsItemsPrice.textContent;
+  let jewelryP = jewelryItemsPrice.textContent;
+
+  menP = menP.slice(1);
+  womenP = womenP.slice(1);
+  kidsP = kidsP.slice(1);
+  jewelryP = jewelryP.slice(1);
+
+  menP = Number(menP);
+  womenP = Number(womenP);
+  kidsP = Number(kidsP);
+  jewelryP = Number(jewelryP);
+
+  calcBtn.addEventListener("click", function () {
+    totalAmount.textContent = `$${menP + womenP + kidsP + jewelryP}`;
+
+    setTimeout(() => {
+      let answer = prompt(
+        "Do you accept the calculated total cost of payment?, Enter 'Yes' or 'No'"
+      );
+      if (answer == "Yes") {
+        alert("Thank You");
+      } else if (answer == "yes") {
+        alert("Thank You");
+      } else {
+        alert("Application Withdrawn");
+      }
+    }, 2000);
   });
 }
-// second page
